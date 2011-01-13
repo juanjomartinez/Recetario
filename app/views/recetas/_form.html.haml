@@ -1,0 +1,25 @@
+= form_for(@receta) do |f|
+	- if @receta.errors.any?
+		#error_explanation
+			- if @receta.errors.count == 1
+				%h2= 'Se ha producido el siguiente error:'
+			- elsif @receta.errors.count > 1
+				%h2= "Se han producido #{@receta.errors.count} errores:"
+			%ul
+				- @receta.errors.full_messages.each do |msg|
+					%li= msg
+
+	.field
+		= f.label :titulo
+		%br
+		= f.text_field :titulo, :size => 20
+	.field
+		= f.label :descripcion
+		%br
+		= f.text_area :descripcion, :rows => 4, :cols => 80
+	.field
+		= f.label :codigo
+		%br
+		= f.text_area :codigo, :rows => 20, :cols => 80
+	.actions
+		= f.submit "Guardar"

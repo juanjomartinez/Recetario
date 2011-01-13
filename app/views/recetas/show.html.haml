@@ -1,0 +1,19 @@
+- if notice
+	#notice= notice
+
+#entrada
+	#titulo
+		= @receta.titulo
+		#editar= link_to '(Editar)', edit_receta_path(@receta)
+	%p= @receta.descripcion
+	%pre= @receta.codigo
+	/*= link_to 'Destroy', @receta, :confirm => 'Are you sure?', :method => :delete*/
+
+- if !@receta.comentarios.empty?
+	#titulo_formulario= 'Comentarios'
+
+= render(@receta.comentarios)
+
+#titulo_formulario= 'Deja tu comentario'
+
+= render('comentarios/new')

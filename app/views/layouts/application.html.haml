@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+%html
+	%title= "Recetario"
+	= stylesheet_link_tag :all
+	= javascript_include_tag :defaults
+	= csrf_meta_tag
+
+%body
+	#content
+		#cabecera
+			#logo
+				%h1= link_to 'Arquero Sistema Corporativo', recetas_url
+				%p= 'Recetas para consultar rápidamente'
+			#login
+				= link_to "http://www.google.com"
+			#busqueda
+				= form_tag('/recetas', :method => 'get') do
+					= text_field_tag('q', params[:q])
+		#link_nueva_receta
+			= link_to image_tag('add.png')+' Nueva Receta', new_receta_path
+		= yield
