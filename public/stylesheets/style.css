@@ -21,6 +21,13 @@ input[type="submit"] {
   padding: 2px 10px 2px 10px;
   font-size: 10px; }
 
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word; }
+
 #notice {
   color: #e58400;
   border: 1px solid #e58400;
@@ -31,7 +38,8 @@ input[type="submit"] {
 #content {
   width: 1000px;
   background-color: white;
-  margin: 1px auto 0px auto; }
+  margin: 1px auto 0px auto;
+  padding-bottom: 20px; }
 
 #cabecera {
   height: 100px;
@@ -68,7 +76,7 @@ input[type="submit"] {
 
 #entrada {
   width: 800px;
-  padding: 20px; }
+  padding: 20px 20px 0px 20px; }
   #entrada #titulo {
     font-size: 2em;
     color: #e58400; }
