@@ -11,7 +11,7 @@ a {
     color: white;
     text-decoration: none; }
 
-input[type="text"], textarea {
+input[type="text"], input[type="password"], textarea {
   border: 1px solid grey; }
 
 input[type="submit"] {
@@ -28,7 +28,8 @@ pre {
   white-space: -o-pre-wrap;
   word-wrap: break-word; }
 
-#notice {
+#notice, #comentario_vacio {
+  display: none;
   color: #e58400;
   border: 1px solid #e58400;
   padding: 5px;
@@ -43,10 +44,10 @@ pre {
 
 #cabecera {
   height: 100px;
-  background-color: #e58400; }
+  background-color: #e58400;
+  margin-bottom: 20px; }
   #cabecera #logo {
-    float: left;
-    clear: both; }
+    float: left; }
     #cabecera #logo h1 {
       margin-left: 20px;
       color: white;
@@ -65,39 +66,54 @@ pre {
 #link_nueva_receta {
   float: right;
   padding: 2px;
-  font-size: 1em;
-  margin: 5px 5px 0px 0px; }
+  font-size: 10px;
+  margin: -20px 5px 0px 0px; }
   #link_nueva_receta a {
     color: #333333; }
   #link_nueva_receta img {
-    height: 20px;
+    height: 15px;
     border: 0;
     vertical-align: middle; }
 
 #entrada {
   width: 800px;
-  padding: 20px 20px 0px 20px; }
-  #entrada #titulo {
-    font-size: 2em;
+  padding: 0px 20px 0px 20px; }
+  #entrada p, #entrada pre {
+    font-size: 10px; }
+
+#titulo {
+  font-size: 13px;
+  color: #e58400; }
+  #titulo a {
     color: #e58400; }
-    #entrada #titulo a {
+    #titulo a:visited {
       color: #e58400; }
-      #entrada #titulo a:visited {
-        color: #e58400; }
-      #entrada #titulo a:hover {
-        color: #e58400; }
-    #entrada #titulo #editar {
-      display: inline; }
-      #entrada #titulo #editar a {
-        color: blue;
-        font-size: 20px; }
+    #titulo a:hover {
+      color: #e58400; }
+  #titulo #editar {
+    display: inline;
+    font-size: 10px; }
+    #titulo #editar a {
+      color: blue; }
 
 #titulo_formulario {
+  font-size: 13px;
   color: #e58400;
-  font-size: 2em;
-  padding: 20px; }
+  margin: 20px 0px 0px 20px; }
 
 #comentario {
-  padding: 0px 0px 10px 20px; }
+  padding: 0px 0px 10px 20px;
+  font-size: 10px; }
   #comentario #cuerpo {
     padding-left: 20px; }
+
+#columna_formulario_1 {
+  float: left;
+  width: 400px; }
+
+#columna_formulario_2 {
+  float: left;
+  width: 400px; }
+
+#limpiar_float {
+  clear: both; }

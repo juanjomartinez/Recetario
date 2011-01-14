@@ -1,0 +1,37 @@
+= form_for(@usuario) do |f|
+	- if @usuario.errors.any?
+		#error_explanation
+			%h2= pluralize(@usuario.errors.count, "error")+'prohibited this usuario from being saved:'
+			%ul
+				- @usuario.errors.full_messages.each do |msg|
+					%li= msg
+	#columna_formulario_1
+		#titulo_formulario= "1. Datos personales"
+		%br
+		.field
+			= f.label :nombre
+			%br
+			= f.text_field :nombre
+		.field
+			= f.label :email
+			%br
+			= f.text_field :email
+	#columna_formulario_2
+		#titulo_formulario= "2. Datos de usuario"
+		%br
+		.field
+			= f.label :user
+			%br
+			= f.text_field :user
+		.field
+			= f.label :password
+			%br
+			= f.password_field :password
+		.field
+			= f.label :password_confirmation
+			%br
+			= f.password_field :password_confirmation
+		.actions
+			= f.submit
+
+#limpiar_float

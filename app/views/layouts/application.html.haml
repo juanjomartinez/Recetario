@@ -12,10 +12,16 @@
 				%h1= link_to 'Arquero Sistema Corporativo', recetas_url
 				%p= 'Recetas para consultar rápidamente'
 			#login
-				= link_to "http://www.google.com"
+				- if !session[:usuario_id]
+					= link_to "Regístrate", new_usuario_path
+					= ' o '
+					= link_to "Logeate", new_usuario_path
+				- else
+					= link_to "Salir", new_usuario_path
 			#busqueda
 				= form_tag('/recetas', :method => 'get') do
 					= text_field_tag('q', params[:q])
-		#link_nueva_receta
-			= link_to image_tag('add.png')+' Nueva Receta', new_receta_path
+		- if session[:usuario_id]
+			#link_nueva_receta
+				= link_to image_tag('add.png')+' Nueva Receta', new_receta_path
 		= yield

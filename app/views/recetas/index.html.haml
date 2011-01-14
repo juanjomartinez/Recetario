@@ -3,9 +3,6 @@
 		#titulo= link_to receta.titulo, receta_path(receta)
 		%p= receta.descripcion
 		%pre= receta.codigo[0..100]
-		= link_to 'Show', receta
-		= link_to 'Edit', edit_receta_path(receta)
-		= link_to 'Destroy', receta, :confirm => 'Are you sure?', :method => :delete
 
 - if @mensaje
 	#entrada

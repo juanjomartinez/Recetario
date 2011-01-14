@@ -13,7 +13,7 @@ a
 		color: white
 		text-decoration: none
 
-input[type="text"], textarea
+input[type="text"], input[type="password"], textarea
 	border: 1px solid grey
 
 input[type="submit"]
@@ -30,7 +30,8 @@ pre
 	white-space: -o-pre-wrap
 	word-wrap: break-word
 
-#notice
+#notice, #comentario_vacio
+	display: none
 	color: $naranja
 	border: 1px solid $naranja
 	padding: 5px
@@ -46,9 +47,9 @@ pre
 #cabecera
 	height: 100px
 	background-color: $naranja
+	margin-bottom: 20px
 	#logo
 		float: left
-		clear: both
 		h1
 			margin-left: 20px
 			color: white
@@ -67,39 +68,52 @@ pre
 #link_nueva_receta
 	float: right
 	padding: 2px
-	font-size: 1em
-	margin: 5px 5px 0px 0px
+	font-size: 10px
+	margin: -20px 5px 0px 0px
 	a
 		color: #333
 	img
-		height: 20px
+		height: 15px
 		border: 0
 		vertical-align: middle
 
 #entrada
 	width: 800px
-	padding: 20px 20px 0px 20px
-	#titulo
-		font-size: 2em
+	padding: 0px 20px 0px 20px
+	p, pre
+		font-size: 10px
+#titulo
+	font-size: 13px
+	color: $naranja
+	a
 		color: $naranja
-		a
+		&:visited
 			color: $naranja
-			&:visited
-				color: $naranja
-			&:hover
-				color: $naranja
-		#editar
-			display: inline
-			a
-				color: blue
-				font-size: 20px
+		&:hover
+			color: $naranja
+	#editar
+		display: inline
+		font-size: 10px
+		a
+			color: blue
 
 #titulo_formulario
+	font-size: 13px
 	color: $naranja
-	font-size: 2em
-	padding: 20px
+	margin: 20px 0px 0px20px
 
 #comentario
 	padding: 0px 0px 10px 20px
+	font-size: 10px
 	#cuerpo
 		padding-left: 20px
+
+#columna_formulario_1
+	float: left
+	width: 400px
+#columna_formulario_2
+	float: left
+	width: 400px
+
+#limpiar_float
+	clear: both

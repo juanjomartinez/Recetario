@@ -1,0 +1,9 @@
+$("#comentario_vacio").hide()
+<% if @comentario.cuerpo=="" %>
+	$("#comentario_vacio").show('slow')
+<% else %>
+	$("#comentarios").append("<%= escape_javascript render(@comentario) %>");
+	$("#comentarios").children().last().hide();
+	$("#comentarios").children().last().show("slow");
+<% end %>
+$("#comentario_cuerpo").val("");

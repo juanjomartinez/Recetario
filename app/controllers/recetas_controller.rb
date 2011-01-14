@@ -2,7 +2,7 @@ class RecetasController < ApplicationController
   # GET /recetas
   # GET /recetas.xml
   def index
-    @recetas = Receta.all
+		@recetas = Receta.find(:all, :conditions => ["titulo LIKE ? OR descripcion LIKE ?","%#{params[:q]}%","%#{params[:q]}%"])
 
     respond_to do |format|
       format.html # index.html.erb

@@ -5,10 +5,17 @@ class ComentariosController < ApplicationController
 	def create
 		@comentario = @receta.comentarios.new(params[:comentario])
 		if @comentario.save
-			redirect_to @receta, :notice => 'Gracias por dejar su comentario'
+			respond_to do |format|
+				format.html { redirect_to @receta, :notice => 'Gracias por dejar su comentario' }
+				format.js
+			end
 		else
-			redirect_to @receta, :notice => 'No se pueden dejar comentarios en blanco'
+			respond_to do |format|
+				format.html { redirect_to @receta, :notice => 'Gracias por dejar su comentario' }
+				format.js
+			end
 		end
+		
 	end
 
 	private

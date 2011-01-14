@@ -9,10 +9,13 @@
 	%pre= @receta.codigo
 	/*= link_to 'Destroy', @receta, :confirm => 'Are you sure?', :method => :delete*/
 
+
 - if !@receta.comentarios.empty?
 	#titulo_formulario= 'Comentarios'
 
-= render(@receta.comentarios)
+#comentarios= render(@receta.comentarios)
+
+#comentario_vacio= 'No se pueden insertar comentarios en blanco'
 
 #titulo_formulario= 'Deja tu comentario'
 

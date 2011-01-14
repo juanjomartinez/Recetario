@@ -1,5 +1,5 @@
-= form_for([@receta, @receta.comentarios.new]) do |f|
+= form_for([@receta, @receta.comentarios.new], :remote => true) do |f|
 	.field
-		= f.text_field :cuerpo
+		= f.text_field :cuerpo, :size => 30
 	.actions
 		= f.submit 'Dejar comentario'
