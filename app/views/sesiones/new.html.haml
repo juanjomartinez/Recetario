@@ -1,0 +1,15 @@
+- if notice
+	#notice= notice
+
+= form_tag do
+
+	.field
+		%label= "Usuario"
+		%br
+		= text_field_tag :user, params[:user]
+	.field
+		%label= "Contraseña"
+		%br
+		= password_field_tag :password
+	.actions
+		= submit_tag "Logearse"

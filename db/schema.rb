@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110114101348) do
+ActiveRecord::Schema.define(:version => 20110114123214) do
 
   create_table "comentarios", :force => true do |t|
     t.integer  "receta_id"
     t.text     "cuerpo"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "usuario_id"
   end
 
   create_table "recetas", :force => true do |t|

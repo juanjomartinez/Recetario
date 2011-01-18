@@ -15,8 +15,9 @@
 
 #comentarios= render(@receta.comentarios)
 
-#comentario_vacio= 'No se pueden insertar comentarios en blanco'
+- if session[:usuario_id]
+	#comentario_vacio= 'No se pueden insertar comentarios en blanco'
 
-#titulo_formulario= 'Deja tu comentario'
+	#titulo_formulario= 'Deja tu comentario'
 
-= render('comentarios/new')
+	= render('comentarios/new')

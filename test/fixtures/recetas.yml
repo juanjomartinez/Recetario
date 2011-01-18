@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  titulo: MyString
-  descripcion: MyString
-  codigo: MyText
+  titulo: 'Prueba de receta 1'
+  descripcion: 'texto de prueba para la receta 1'
+  codigo: 'ejemplo de código para la receta 1'
 
 two:
-  titulo: MyString
-  descripcion: MyString
-  codigo: MyText
+  titulo: 'Prueba de receta 2'
+  descripcion: 'texto de prueba para la receta 2'
+  codigo: 'ejemplo de código para la receta 2'

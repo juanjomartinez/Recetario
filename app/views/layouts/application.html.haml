@@ -15,9 +15,9 @@
 				- if !session[:usuario_id]
 					= link_to "Regístrate", new_usuario_path
 					= ' o '
-					= link_to "Logeate", new_usuario_path
+					= link_to "Logeate", :controller => 'sesiones', :action => 'new'
 				- else
-					= link_to "Salir", new_usuario_path
+					= link_to "Salir", :controller => 'sesiones', :action => 'destroy'
 			#busqueda
 				= form_tag('/recetas', :method => 'get') do
 					= text_field_tag('q', params[:q])

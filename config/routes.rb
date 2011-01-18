@@ -1,5 +1,13 @@
 Recetario::Application.routes.draw do
 
+	controller :sesiones do
+		get "login" => :new
+		post "login" => :create
+		get "logout" => :destroy
+	end
+
+  get "sesiones/destroy"
+
   resources :usuarios
 
   resources :recetas do

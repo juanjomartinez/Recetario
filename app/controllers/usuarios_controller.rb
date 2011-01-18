@@ -1,4 +1,6 @@
 class UsuariosController < ApplicationController
+	before_filter :usuario_logeado, :except => :new
+
   # GET /usuarios
   # GET /usuarios.xml
   def index
@@ -81,4 +83,10 @@ class UsuariosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+	def usuario_logeado
+		if !session[:usuario_id]
+			redirect_to login_path
+		end
+	end
 end

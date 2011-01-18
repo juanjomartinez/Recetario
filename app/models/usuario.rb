@@ -9,6 +9,8 @@ class Usuario < ActiveRecord::Base
   attr_reader   :password
 
   validate  :password_must_be_present
+
+	has_many :comentarios
   
   def Usuario.auth(user, password)
     if user = find_by_user(user)

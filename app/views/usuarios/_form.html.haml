@@ -9,7 +9,7 @@
 		#titulo_formulario= "1. Datos personales"
 		%br
 		.field
-			= f.label :nombre
+			= f.label :nombre, "Nombre completo"
 			%br
 			= f.text_field :nombre
 		.field
@@ -20,15 +20,15 @@
 		#titulo_formulario= "2. Datos de usuario"
 		%br
 		.field
-			= f.label :user
+			= f.label :user, "Usuario"
 			%br
 			= f.text_field :user
 		.field
-			= f.label :password
+			= f.label :password, "Contraseña"
 			%br
 			= f.password_field :password
 		.field
-			= f.label :password_confirmation
+			= f.label :password_confirmation, "Repita la contraseña"
 			%br
 			= f.password_field :password_confirmation
 		.actions
