@@ -3,9 +3,10 @@ class RecetasController < ApplicationController
   # GET /recetas.xml
   def index
 		@recetas = Receta.find(:all, :conditions => ["titulo LIKE ? OR descripcion LIKE ?","%#{params[:q]}%","%#{params[:q]}%"])
+		@notice = 'No se ha encontrado ninguna coincidencia' if @recetas.size==0
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render :notice => notice }
       format.xml  { render :xml => @recetas }
     end
   end

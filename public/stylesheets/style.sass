@@ -29,6 +29,8 @@ pre
 	white-space: -pre-wrap
 	white-space: -o-pre-wrap
 	word-wrap: break-word
+	border-bottom: 1px solid #e0e0e0
+	border-right: 1px solid #e0e0e0
 
 #notice, #comentario_vacio
 	color: $naranja
@@ -50,6 +52,7 @@ pre
 	height: 100px
 	background-color: $naranja
 	margin-bottom: 20px
+	border-bottom: 2px solid orange
 	#logo
 		float: left
 		h1
@@ -59,13 +62,14 @@ pre
 			font-size: 3em
 		p
 			margin-left: 40px
-	#login
+	#elementos
 		float: right
-		margin: 0px 20px 0px 0px
-		font-size: 10px
-	#busqueda
-		float: right
-		margin: 50px 20px 0px 0px
+		text-align: right
+		#login
+			margin: 0px 20px 0px 0px
+			font-size: 10px
+		#busqueda
+			margin: 50px 20px 0px 0px
 
 #link_nueva_receta
 	float: right
@@ -119,3 +123,12 @@ pre
 
 #limpiar_float
 	clear: both
+
+#lightbox
+	position: absolute
+	background-image: url('../images/lightbox-background.png')
+	height: 200px
+	width: 350px
+	margin: 50px 0px 0px 300px
+	#contenido
+		padding: 20px
