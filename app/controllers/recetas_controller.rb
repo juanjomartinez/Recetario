@@ -2,7 +2,8 @@ class RecetasController < ApplicationController
   # GET /recetas
   # GET /recetas.xml
   def index
-		@recetas = Receta.find(:all, :conditions => ["titulo LIKE ? OR descripcion LIKE ?","%#{params[:q]}%","%#{params[:q]}%"])
+		# @recetas = Receta.find(:all, :conditions => ["titulo LIKE ? OR descripcion LIKE ?","%#{params[:q]}%","%#{params[:q]}%"])
+		@recetas = Receta.search(:titulo_or_descripcion_contains => params[:q]).all
 		@notice = 'No se ha encontrado ninguna coincidencia' if @recetas.size==0
 
     respond_to do |format|
